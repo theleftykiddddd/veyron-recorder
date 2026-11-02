@@ -1,32 +1,35 @@
+
 name: Build Veyron Proyect
 
 on:
-  push:
-    branches: [main]
-  workflow_dispatch:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: read
 
 jobs:
-  build-windows:
-    name: Build Geode mod (Windows)
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout source
-        uses: actions/checkout@v4
+  build-windows:
+    name: Build Geode mod (Windows)
+    runs-on: ubuntu-latest
 
-      - name: Build .geode package
-        id: build
-        uses: geode-sdk/build-geode-mod@main
-        with:
-          sdk: v6.0.0-alpha.1
-          target: Win64
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
 
-      - name: Upload .geode file
-        uses: actions/upload-artifact@v4
-        with:
-          name: Veyron-Proyect-Windows
-          path: ${{ steps.build.outputs.build-output }}
-          if-no-files-found: error
-          retention-days: 14
+      - name: Build .geode package
+        id: build
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          sdk: v6.0.0-alpha.1
+          target: Win64
+
+      - name: Upload .geode file
+        uses: actions/upload-artifact@v4
+        with:
+          name: Veyron-Proyect-Windows
+          path: ${{ steps.build.outputs.build-output }}
+          if-no-files-found: error
+          retention-days: 14
