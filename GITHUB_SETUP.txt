@@ -1,0 +1,18 @@
+VEYRON PROYECT - GITHUB ACTIONS BUILD
+
+Este proyecto incluye un workflow en:
+.github/workflows/build.yml
+
+PARA COMPILAR EN GITHUB:
+1. Crea un repositorio vacío en https://github.com/new llamado Veyron-Proyect.
+2. Sube TODO el contenido de esta carpeta a la raíz del repositorio (no subas la carpeta contenedora Veyron-Proyect).
+3. En GitHub, abre la pestaña Actions.
+4. Selecciona "Build Veyron Proyect" y ejecuta "Run workflow" si no se ejecutó automáticamente al subir los archivos.
+5. Cuando termine correctamente, abre la ejecución y descarga el artefacto "Veyron-Proyect-Windows".
+6. Dentro del artefacto estará el paquete .geode si la compilación terminó correctamente.
+
+IMPORTANTE:
+- El workflow compila para Windows (Win64) usando Geode SDK v6.0.0-alpha.1.
+- La compilación completa depende de que esa versión del SDK y la acción de Geode estén disponibles y sean compatibles.
+- Las pruebas del núcleo sí compilan y pasan, pero eso NO equivale a haber generado un .geode.
+- Este proyecto es todavía un prototipo. Los hooks de entrada, reproducción dentro del juego, HUD y medición real de ventanas de frames siguen pendientes. Consulta IMPLEMENTATION_STATUS.md.

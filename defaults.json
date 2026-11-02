@@ -1,0 +1,6 @@
+{
+  "overlay": {"enabled": true, "position": "top-right", "scale": 1.0, "opacity": 0.94, "showCurrentWindow": true, "showCounts": true},
+  "audio": {"enabled": true, "masterVolume": 0.65, "minWindowHz": 95, "maxWindowHz": 880, "waveform": "sine", "durationMs": 90, "cooldownMs": 25},
+  "analysis": {"unknownAsGray": true, "includePlayer2": true, "groupSimultaneousInputs": true, "defaultMaxFrames": 24},
+  "recording": {"autosave": true, "autosaveIntervalSeconds": 30, "capturePlayer1": true, "capturePlayer2": true}
+}

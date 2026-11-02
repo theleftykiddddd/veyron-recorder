@@ -1,0 +1,24 @@
+{
+  "projectFormat": "veyron-project",
+  "version": 1,
+  "title": "Example analysis profile",
+  "tickRate": 240,
+  "bands": [
+    {"min": 0, "max": 1, "label": "0-1F"},
+    {"min": 2, "max": 2, "label": "2F"},
+    {"min": 3, "max": 3, "label": "3F"},
+    {"min": 4, "max": 4, "label": "4F"},
+    {"min": 5, "max": 6, "label": "5-6F"},
+    {"min": 7, "max": 8, "label": "7-8F"},
+    {"min": 9, "max": 12, "label": "9-12F"},
+    {"min": 13, "max": 16, "label": "13-16F"},
+    {"min": 17, "max": 24, "label": "17-24F"}
+  ],
+  "audio": {
+    "enabled": true,
+    "lowWindowHz": 95,
+    "highWindowHz": 880,
+    "durationMs": 90,
+    "volume": 0.55
+  }
+}

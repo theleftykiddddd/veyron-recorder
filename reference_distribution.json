@@ -1,0 +1,15 @@
+{
+  "title": "Reference chart supplied by user",
+  "note": "Illustrative counts transcribed from the supplied image; not a measurement of a level by Veyron.",
+  "groups": [
+    {"range":"0-1F","count":55,"color":"#F04B68"},
+    {"range":"2F","count":51,"color":"#FFBD70"},
+    {"range":"3F","count":61,"color":"#F8FF72"},
+    {"range":"4F","count":41,"color":"#F4F4F4"},
+    {"range":"5-6F","count":44,"color":"#8BE995"},
+    {"range":"7-8F","count":41,"color":"#9CCEFF"},
+    {"range":"9-12F","count":60,"color":"#897DEB"},
+    {"range":"13-16F","count":36,"color":"#B78BEE"},
+    {"range":"17-24F","count":34,"color":"#DB74E8"}
+  ]
+}
