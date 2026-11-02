@@ -3,8 +3,7 @@ name: Build Veyron Proyect
 
 on:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,24 +11,48 @@ permissions:
 
 jobs:
   build-windows:
-    name: Build Geode mod (Windows)
+    name: Build Veyron (Windows)
     runs-on: windows-latest
 
     steps:
       - name: Checkout source
         uses: actions/checkout@v4
 
-      - name: Build .geode package
+      - name: Build Windows mod
         id: build
         uses: geode-sdk/build-geode-mod@main
         with:
           sdk: v6.0.0-alpha.1
           target: Win64
 
-      - name: Upload .geode file
+      - name: Upload Windows package
         uses: actions/upload-artifact@v4
         with:
           name: Veyron-Proyect-Windows
           path: ${{ steps.build.outputs.build-output }}
           if-no-files-found: error
           retention-days: 14
+
+  build-android:
+    name: Build Veyron (Android64)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Build Android64 mod
+        id: build
+        uses: geode-sdk/build-geode-mod@main
+        with:
+          sdk: v6.0.0-alpha.1
+          target: Android64
+
+      - name: Upload Android package
+        uses: actions/upload-artifact@v4
+        with:
+          name: Veyron-Proyect-Android64
+          path: ${{ steps.build.outputs.build-output }}
+          if-no-files-found: error
+          retention-days: 14
+
