@@ -1,6 +1,9 @@
 {
 "geode": "6.0.0-alpha.1",
-  "gd": { "win": "2.2091" },
+  "gd": {
+  "win": "2.2091",
+  "android": "2.2091"
+
   "id": "alan.veyron-proyect",
   "name": "Veyron Proyect",
   "version": "v0.1.0",
